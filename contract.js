@@ -1,14 +1,21 @@
 //https://github.com/eoinco/nci_2021
 
 // this is a basic readonly contract interaction file
+
+//loads web3 dependency
 const Web3 = require("web3")
 
 // https://ropsten.infura.io/v3/b520a57358984eeca5b1a3453ed2a393
 
-// today's lab
+// sets up my .env file
+require('dotenv').config()
+
+// loading my environment variables
+infuraToken = process.env.INFURA_TOKEN
+
 
 // instantiate web3
-const rpcURL= "https://ropsten.infura.io/v3/b520a57358984eeca5b1a3453ed2a393";
+const rpcURL= "https://ropsten.infura.io/v3/" + infuraToken;
 const web3 = new Web3(rpcURL);
 console.log("connected to web3");
 
@@ -275,7 +282,7 @@ const abi = [
 
 // connnect to our contract on ropsten
 //get our contract address
-const address ="0x6512beebda1bed49bca784228b627f790c26116f"
+const address ="0xb1f21bf20cd1508fbd50d7a39024b3286a0a8202"
 const owner ="0x677d0A16a55fd52195Eb53C733899f691af79882"
 
 const contract = new web3.eth.Contract(abi, address);
