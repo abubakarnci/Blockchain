@@ -12,6 +12,8 @@ require('dotenv').config()
 
 // loading my environment variables
 infuraToken = process.env.INFURA_TOKEN
+contractAddress=process.env.CONTRACT_ADDRESS
+ownerAddress=process.env.OWNER_ADDRESS
 
 
 // instantiate web3
@@ -282,9 +284,10 @@ const abi = [
 
 // connnect to our contract on ropsten
 //get our contract address
-const address ="0xb1f21bf20cd1508fbd50d7a39024b3286a0a8202"
-const owner ="0x677d0A16a55fd52195Eb53C733899f691af79882"
+const address =contractAddress;
+const owner =ownerAddress;
 
+//contract object
 const contract = new web3.eth.Contract(abi, address);
 console.log("connected to contract on ropsten")
 
