@@ -336,9 +336,9 @@ const returnAllValues = async() => {
 	console.log(await getName());
 
 }
-returnAllValues();
+//returnAllValues();
 
 
-console.log("hello world?");
+console.log("Testing Environment");
 
-
+module.exports = {getSymbol, getDecimals, getBalanceOwner,getName}

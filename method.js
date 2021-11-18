@@ -324,11 +324,12 @@ const transferToken = async(toAccount, amount) => {
     let txResponse = await sendTx(raw);
 
     console.log("tx response is: "+ txResponse .toString());
-    console.log("transcation hash: "+ txResponse .transactionHash);
-    console.log("transcation in block: "+ txResponse .blockNumber);
+    console.log("Transcation hash: "+ txResponse .transactionHash);
+    console.log("Transcation in block: "+ txResponse .blockNumber);
 
 
 }
+
 
 
 // create a transaction to execute a method on the contract
@@ -338,4 +339,7 @@ const transferToken = async(toAccount, amount) => {
 // broadcast the transaction
 
 
-transferToken('0x677d0A16a55fd52195Eb53C733899f691af79882', 123000000)
+//transferToken('0x677d0A16a55fd52195Eb53C733899f691af79882', 123000000)
+
+module.exports = { transferToken }
+

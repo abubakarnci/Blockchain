@@ -79,3 +79,12 @@ We want to use large chunks of code that others have written to interact with Et
 From inside your folder, to create your own package.json:
 
 ```$npm init```
+
+
+## CURL accessing of handlers ##
+To POST to a route, execute the following CURL command:
+``` curl -XPOST http://localhost:8082/transfer -H 'content-type: application/json' -d '{"account_to": "0x677d0A16a55fd52195Eb53C733899f691af79882","amount":"123000"}' ```
+
+
+## CURL get request ##
+``` curl -XGET http://localhost:8082/symbol ```
