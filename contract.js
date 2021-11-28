@@ -297,33 +297,33 @@ console.log("connected to contract on ropsten")
 const getName = async() =>{
 
 	let name=await contract.methods.name().call();
-	return "Name: "+ name;
+	return name;
 
 }
 
 const getBalanceOwner  = async(owner) => {
     let bal = await contract.methods.balanceOf(owner).call();
-    return "Balance of owner: " + bal;
+    return  bal;
 
 }
 
 
 const getTotalSupply = async() => {
     let totSupply = await contract.methods.totalSupply().call();
-    return "total supply is: " + totSupply;
+    return  totSupply;
 
 }
 
 const getDecimals = async() => {
     let decimals = await contract.methods.decimals().call();
-    return "No of decimal places is: " + decimals;
+    return decimals;
 
 }
 
 
 const getSymbol = async() => {
     let symbol = await contract.methods.symbol().call();
-    return "Symbol is: " + symbol;
+    return symbol;
 
 }
 
