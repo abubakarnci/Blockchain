@@ -57,6 +57,7 @@ const distribute = async() => {
     let distributionAmount = fivePerCent.div(numberOfAddresses);
     console.log(`Distribution amount per address is ${distributionAmount}`)
 
+    //Loop through N accounts
     for (looper = 0; looper < numberOfAddresses; looper++) {
         console.log(`About to distribute ${tokenSymbol}, ${distributionAmount} tokens go to ${distributionAddresses[looper]}`)
 
@@ -65,7 +66,7 @@ const distribute = async() => {
 
     }
 
-    //Loop through N accounts
+    
 
     // for each account do the transfer 
 
