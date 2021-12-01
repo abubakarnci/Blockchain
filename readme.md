@@ -1,7 +1,27 @@
 
 # Readme #
 
-This is the readme for this project.  It will include any useful links and commands to run.
+This is the readme for this project. It includes step by step instructions of how to run this project.
+
+# Setting up tools to run the code #
+
+## Set-up METAMASK on browser ##
+
+```https://metamask.io/```
+
+## Create infura account ##
+
+```https://infura.io/```
+
+Create new Ethereum project of your own choice name
+
+## Go to Etherscan for details of transaction ##
+
+```https://ropsten.etherscan.io/```
+
+## Use remix to create and deploy contracts ##
+
+```http://remix.ethereum.org/```
 
 ## Install Visual Studio Code ##
 
@@ -9,9 +29,9 @@ This is the readme for this project.  It will include any useful links and comma
 
 ## Install Git ##
 
-1. get a github account at github.com
+1. Get a github account at github.com
 
-2. install git locally
+2. Install git locally
 
 ```https://github.com/git-guides/install-git```
 
@@ -21,49 +41,73 @@ Install following the instructions at the following web page:
 
 ```https://nodejs.org/en/download/```
 
-## Cloning a Repository ##
-
-Create a folder for your college projects.  Go into that folder.
-
-Inside that college folder, run:
-
-```git clone https://github.com/eoinco/nci_2021.git```
-
-## Updating Code in Repo from Github ##
-
-From the terminal in Visual Studio Code (or from the command line - as long as you are in the folder), run the following command:
-
-```git pull origin main```
-
-## for the moment ##
-
-you need git, nodejs and vs code installed.
-
 ## Validation Steps ##
 
 How to tell you have git installed:
 
 ```$git version```
 
-How to tell you have node installed:
+How to tell you have node & npm installed:
 
 ```$node -v```
 
-## Using your own repo ##
+```$npm -v```
 
-First, create a repo in github.
+# Steps to follow to run this project #
 
-git clone into a folder
+## Cloning a Repository ##
 
-make your changes
+Create a folder on your local machine.  Go into that folder.
 
-then run the following commands:
+Inside that folder open git bash and run:
 
-```$git add <your updated files>```
+```git clone https://github.com/abubakarnci/Blockchain.git```
 
-```$git commit -m "<your commit message>"```
+## Open Visual Studio Code ##
 
-```$git push origin main```
+Open that cloned project in visual code 
+
+## Create a file ##
+
+1. Create a file named ```.env``` in the same folder with rest of the files.
+
+2. Open that file and past this:
+
+```INFURA_TOKEN =  ``` 
+Put Infura PROJECT ID after equals which you can get by going onto project settings.
+
+```CONTRACT_ADDRESS =```
+Get your verified contract address and put it after equals. 
+
+```OWNER_ADDRESS=```
+Put your METAMASK account address.
+
+```SUPER_SECRET_PRIVATE_KEY=```
+Paste your private key by coping it from METAMASK.   
+
+## Dependencies and NPM ##
+
+To use large chunks of code that others have written to interact with Ethereum, like the web3 package. You need to set up the Node Package Manager (npm).
+
+From inside your folder, to create your own package.json:
+
+```$npm init```
+
+## Install following dependencies ##
+
+Run each command in terminal inside project folder.
+
+```$npm install web3 ```
+
+```$npm install dotenv ```
+
+```$npm install ethereumjs-tx ```
+
+```$npm install express ```
+
+```$npm install fs ```
+
+```$npm install big-number ```
 
 ## Executing a .JS file ##
 
@@ -71,20 +115,22 @@ To execute a javascript file using node.js, run the following command:
 
 ```$node <file name>```
 
+## Run app through REST API ##
 
-## Dependencies and NPM ##
+```$node handlers.js ```
 
-We want to use large chunks of code that others have written to interact with Ethereum, like the web3 package.  Do this, we need to set up the Node Package Manager (npm).
+Open another terminal and execute the following CURL command to get symbol:
 
-From inside your folder, to create your own package.json:
-
-```$npm init```
-
-
-## CURL accessing of handlers ##
-To POST to a route, execute the following CURL command:
-``` curl -XPOST http://localhost:8082/transfer -H 'content-type: application/json' -d '{"account_to": "0x677d0A16a55fd52195Eb53C733899f691af79882","amount":"123000"}' ```
-
-
-## CURL get request ##
 ``` curl -XGET http://localhost:8082/symbol ```
+
+To POST to a route, execute the following command:
+
+``` curl -XPOST http://localhost:8082/transfer -H 'content-type: application/json' -d '{"account_to": "any account address", "amount": "put amount"}' ```
+
+## Run app without REST API ##
+
+```$node distribute.js ```
+
+Check terminal to see response after each transaction
+
+Check Etherscan for more details about each transaction
