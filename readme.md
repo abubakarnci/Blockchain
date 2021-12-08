@@ -134,3 +134,40 @@ To POST to a route, execute the following command:
 Check terminal to see response after each transaction
 
 Check Etherscan for more details about each transaction
+
+
+
+## Docker ##
+
+### View running docker containers ###
+
+```docker ps```
+
+### build a docker container ###
+
+```docker build -t nci/project2021 .```
+
+### run the image ###
+
+```docker run -p 8090:8082 --name nci -d nci/project2021```
+
+### kill a running container ###
+```docker kill [name]```
+
+### start/stop a container ###
+```docker start/stop [name]```
+
+### view logs ###
+```docker logs [name]```
+
+### view logs inside a container ###
+```docker logs -f [name]```
+
+### view images on your computer ###
+```docker image ls```
+
+### clear the docker system ###
+```docker system prune -f```
+
+### remove all docker images ###
+```docker image prune -a -f```
