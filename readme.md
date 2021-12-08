@@ -171,3 +171,6 @@ Check Etherscan for more details about each transaction
 
 ### remove all docker images ###
 ```docker image prune -a -f```
+
+### run docker-compose ###
+```docker-compose up```
