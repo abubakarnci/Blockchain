@@ -137,40 +137,46 @@ Check Etherscan for more details about each transaction
 
 
 
-## Docker ##
+# Docker #
+
+## My Docker hub link ##
+
+```https://hub.docker.com/repository/docker/abubakarnci/blockchain```
+
+## Commants to use Docker ## 
 
 ### View running docker containers ###
 
 ```docker ps```
 
-### build a docker container ###
+### Build a docker container ###
 
 ```docker build -t nci/project2021 .```
 
-### run the image ###
+### Run the image ###
 
 ```docker run -p 8090:8082 --name nci -d nci/project2021```
 
-### kill a running container ###
+### Kill a running container ###
 ```docker kill [name]```
 
-### start/stop a container ###
+### Start/stop a container ###
 ```docker start/stop [name]```
 
-### view logs ###
+### View logs ###
 ```docker logs [name]```
 
-### view logs inside a container ###
+### View logs inside a container ###
 ```docker logs -f [name]```
 
-### view images on your computer ###
+### View images on your computer ###
 ```docker image ls```
 
-### clear the docker system ###
+### Clear the docker system ###
 ```docker system prune -f```
 
-### remove all docker images ###
+### Remove all docker images ###
 ```docker image prune -a -f```
 
-### run docker-compose ###
+### Run docker-compose ###
 ```docker-compose up```
