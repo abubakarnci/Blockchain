@@ -143,7 +143,7 @@ Check Etherscan for more details about each transaction
 
 ```https://hub.docker.com/repository/docker/abubakarnci/blockchain```
 
-## Commants to use Docker ## 
+## Commands to use Docker ## 
 
 ### View running docker containers ###
 
